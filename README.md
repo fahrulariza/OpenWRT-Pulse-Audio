@@ -83,7 +83,9 @@ sudo -u pulse pulseaudio --daemonize --disallow-exit --disable-shm --exit-idle-t
 ```
 hciconfig
 ```
->   Pastikan adaptor Anda (misalnya hci0 atau hci1) memiliki BD Address yang valid (bukan 00:00...) dan status UP RUNNING.
+
+>   Pastikan adaptor Anda (misalnya hci0 atau hci1) memiliki BD Address yang valid (bukan 00:00...) dan status UP RUNNING.<br>
+```
 root@wow-wrt:/# hciconfig<br>
 hci1:   Type: Primary  Bus: UART<br>
         BD Address: 00:00:00:00:00:00  ACL MTU: 0:0  SCO MTU: 0:0<br>
@@ -96,7 +98,7 @@ hci0:   Type: Primary  Bus: USB<br>
         UP RUNNING <br>
         RX bytes:27432458 acl:367 sco:0 events:3917831 errors:0<br>
         TX bytes:-1883463402 acl:3915131 sco:0 commands:331 errors:0<br>
-
+```
 3. Uji Koneksi Bluetooth:
 ```
 bluetoothctl
