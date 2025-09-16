@@ -17,24 +17,24 @@ Panduan ini menjelaskan langkah-langkah untuk menginstal dan mengkonfigurasi dri
 <p>
 Daftar Isi
   <br>
-  1. ⚙️ Persiapan Awal<br>
-  2. 🛠️ Konfigurasi PulseAudio<br>
-3. Tes Koneksi dan Pemutaran Audio
-4. Otomatisasi dengan Skrip Startup
+>  1. ⚙️ Persiapan Awal<br>
+>  2. 🛠️ Konfigurasi PulseAudio<br>
+>  3. Tes Koneksi dan Pemutaran Audio
+>  4. Otomatisasi dengan Skrip Startup
 </p>
 <br>
 
 ## 1. ⚙️ Persiapan Awal
 Langkah pertama adalah memastikan semua paket yang diperlukan terinstal.
-1. Perbarui Daftar Paket:
+> 1. Perbarui Daftar Paket:
 ```
 opkg update
 ```
-2. Instal Layanan Bluetooth:
+> 2. Instal Layanan Bluetooth:
 ```
 opkg install kmod-bluetooth bluez-utils bluez-daemon
 ```
-3. Instal Layanan Audio (PulseAudio):
+> 3. Instal Layanan Audio (PulseAudio):
 ```
 opkg install pulseaudio pulseaudio-tools pulseaudio-module-bluetooth
 ```
@@ -42,19 +42,19 @@ opkg install pulseaudio pulseaudio-tools pulseaudio-module-bluetooth
 
 ## 2. 🛠️ Konfigurasi PulseAudio
 Modifikasi file konfigurasi PulseAudio untuk mengaktifkan modul Bluetooth.
-1. Buka file `system.pa`:
+> 1. Buka file `system.pa`:
 ```
 vi /etc/pulse/system.pa
 ```
-2. Tambahkan Modul Bluetooth:<br>
-   Tambahkan baris berikut di akhir file atau di bagian yang sesuai:
+> 2. Tambahkan Modul Bluetooth:<br>
+>    Tambahkan baris berikut di akhir file atau di bagian yang sesuai:
 ```
 ### Bluetooth modules
 load-module module-bluetooth-discover
 load-module module-bluez5-discover
 ```
-3. Nonaktifkan Modul yang Tidak Perlu:<br>
-   Pastikan modul `module-detect` dan `module-console-kit` dinonaktifkan dengan menambahkan `#` di depannya untuk menghindari kesalahan. Bagian yang relevan akan terlihat seperti ini:
+> 3. Nonaktifkan Modul yang Tidak Perlu:<br>
+>    Pastikan modul `module-detect` dan `module-console-kit` dinonaktifkan dengan menambahkan `#` di depannya untuk menghindari kesalahan. Bagian yang relevan akan terlihat seperti ini:
   ```
   # .ifexists module-detect.so
   # load-module module-detect
