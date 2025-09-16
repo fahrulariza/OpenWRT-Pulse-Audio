@@ -70,6 +70,9 @@ opkg remove --force-removal-of-dependent-packages pulseaudio-daemon
 >   lalu ulangi Instal Layanan Audio (PulseAudio) secara berurutan:
 
 ## 2. 🛠️ Konfigurasi PulseAudio
+<br>
+<br>
+
 Modifikasi file konfigurasi PulseAudio untuk mengaktifkan modul Bluetooth.<br>
 
 1. Buka file `system.pa`:
@@ -84,6 +87,9 @@ vi /etc/pulse/system.pa
 load-module module-bluetooth-discover
 load-module module-bluez5-discover
 ```
+<br>
+<br>
+
 3. Nonaktifkan Modul yang Tidak Perlu:<br>
 >    Pastikan modul `module-detect` dan `module-console-kit` dinonaktifkan dengan menambahkan `#` di depannya untuk menghindari kesalahan. Bagian yang relevan akan terlihat seperti ini:<br>
 ```
@@ -97,6 +103,10 @@ load-module module-bluez5-discover
 ```
 > Simpan dan tutup file dengan menekan `Esc`, lalu ketik `:wq` dan tekan Enter.<br>
 > atau kamu bisa melakukan perubahan isi file `system.pa` melalui filemanager
+
+<br>
+<br>
+
 4. Buat direktori PulseAudio dan atur izin<br>
 
 ```
@@ -106,6 +116,8 @@ chown -R pulse:pulse /var/run/pulse
 
 ## 3. 🛠️ Tes Koneksi dan Pemutaran Audio
 Uji semua layanan secara manual sebelum membuat skrip otomatisasi.
+<br>
+<br>
 
 1. Mulai Ulang Layanan:
 >   Hentikan PulseAudio:<br>
@@ -126,6 +138,9 @@ killall pulseaudio
 ```
 sudo -u pulse pulseaudio --daemonize --disallow-exit --disable-shm --exit-idle-time=-1
 ```
+<br>
+<br>
+
 2. Identifikasi Adaptor Bluetooth:
 ```
 hciconfig
@@ -163,6 +178,9 @@ hci0:   Type: Primary  Bus: USB
         RX bytes:27432458 acl:367 sco:0 events:3917831 errors:0
         TX bytes:-1883463402 acl:3915131 sco:0 commands:331 errors:0
 ```
+<br>
+<br>
+
 3. Uji Koneksi Bluetooth:
 >  Di dalam `bluetoothctl`, pastikan speaker Anda dalam mode pairing, lalu jalankan perintah berikut:
 ```
