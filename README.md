@@ -66,7 +66,7 @@ load-module module-bluez5-discover
 # load-module module-console-kit
 # .endif
 ```
-> Simpan dan tutup file dengan menekan `Esc`, lalu ketik `:wq` dan tekan Enter.
+> Simpan dan tutup file dengan menekan `Esc`, lalu ketik `:wq` dan tekan Enter.<br>
 > atau kamu bisa melakukan perubahan isi file `system.pa` melalui filemanager
 <br>
 
