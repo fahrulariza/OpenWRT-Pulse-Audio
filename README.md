@@ -91,6 +91,7 @@ hciconfig
 
 >   Pastikan adaptor Anda (misalnya hci0 atau hci1) memiliki BD Address yang valid (bukan 00:00...) dan status `UP RUNNING`.<br>
 >   contoh hciconfig belum `UP RUNNING` atau status `DOWN`
+> Lewatkan hciconfig jika belum ada koneksi ke perangkat melalui bluetooth. lanjut ke tahap selanjutnya
 ```
 root@riza-wrt:/# hciconfig
 
@@ -124,7 +125,17 @@ hci0:   Type: Primary  Bus: USB
 bluetoothctl
 ```
 ```
+bluetoothctl# power on
+```
+```
+bluetoothctl# agent on
+```
+```
 bluetoothctl# scan on
+```
+>   trust bluetooth jika tampil bluetooth yang ingin di koneksikan
+```
+bluetoothctl# trust D0:85:73:E4:98:08
 ```
 >   scan bluetooth jika tampil bluetooth yang ingin di koneksikan
 ```
@@ -132,12 +143,25 @@ bluetoothctl# scan on
 ```
 >   Jika berhasil, akan muncul pesan Connection successful.
 4. Uji Pemutaran Audio:
-```
-sudo -u pulse pactl set-default-sink bluez_sink.D0_53:58:F4:98_08.a2dp_sink
-```
+> Cek apakah audio dialihkan ke aliran bluetooth
 ```
 sudo -u pulse pactl list short sinks
 ```
+> jika belum maka set pengaturan ke alamat bluetooth
+```
+sudo -u pulse pactl set-default-sink bluez_sink.D0_53:58:F4:98_08.a2dp_sink
+```
+> Cek lagi apakah audio sudah dialihkan ke aliran bluetooth
+```
+sudo -u pulse pactl list short sinks
+```
+jika hasilnya seperti ini maka berhasil
+```
+root@wow-wrt:/# sudo -u pulse pactl list short sinks
+1       bluez_sink.D0_85_73_E4_98_08.a2dp_sink  module-bluez5-device.c  s16le 2ch 44100Hz       SUSPENDED
+root@wow-wrt:/#
+```
+
 >   Jika sink Bluetooth muncul, uji pemutaran audio:
 >   file audio harus berformat `wav`
 ```
