@@ -286,8 +286,14 @@ Selamat, audio berhasil diputar!
 
 6. Otomatis terkoneksi saat OpenWRT dihidupkan.
 
-> Gunakan script ini jika ingin otomatis [here]([https://github.com/fahrulariza/openwrt-telegrambot/blob/master/README-EN.md](https://github.com/fahrulariza/OpenWRT-Pulse-Audio/releases) <br>
+> Gunakan script ini jika ingin otomatis [here](https://github.com/fahrulariza/OpenWRT-Pulse-Audio/releases) <br>
 > simpan ditempat yang mudah diakses.<br>
 > edit pada script ubah MAC sesuai perangkat Speaker Bluetooth yang ingin di koneksikan.<br>
-
+lalu ubah perizinan dan konversi
+```
+chmod +x /path/ke/audio-auto-connect.sh
+```
+```
+dos2unix /path/ke/audio-auto-connect.sh
+```
 
