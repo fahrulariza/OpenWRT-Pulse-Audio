@@ -19,11 +19,12 @@ Panduan ini menjelaskan langkah-langkah untuk menginstal dan mengkonfigurasi dri
 ## Daftar Isi
 
 <br>
-        >  1. ⚙️ Persiapan Awal<br>
-        >  2. 🛠️ Konfigurasi PulseAudio<br>
-        >  3. 🛠️ Tes Koneksi dan Pemutaran Audio<br>
-        >  4. ⚙️ Otomatisasi dengan Skrip Startup<br>
-        
+- **1. ⚙️ Persiapan Awal**<br>
+- **2. 🛠️ Konfigurasi PulseAudio**<br>
+- **3. 🛠️ Tes Koneksi dan Pemutaran Audio**<br>
+- **4. ⚙️ Otomatisasi dengan Skrip Startup**<br>
+<br>    
+
 ## 🚀 Fitur Pengembangan kedepannya bisa digunakan untuk
 - **Alarm Cuara**
 - **Audio Adzan**
