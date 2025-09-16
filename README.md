@@ -97,9 +97,14 @@ bluetoothctl# scan on
 [bluetooth]# connect D0:53:58:F4:98:08
 ```
 >   Jika berhasil, akan muncul pesan Connection successful.
-
-
-
+> 4. Uji Pemutaran Audio:
+```
+sudo -u pulse pactl list short sinks
+```
+>   Jika sink Bluetooth muncul, uji pemutaran audio:
+```
+sudo -u pulse paplay /path/ke/file.wav
+```
 
 
 
