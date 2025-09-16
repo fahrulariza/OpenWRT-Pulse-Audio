@@ -88,6 +88,12 @@ hciconfig
 > 3. Uji Koneksi Bluetooth:
 ```
 bluetoothctl
+```
+```
+bluetoothctl# scan on
+```
+>   scan bluetooth jika tampil bluetooth yang ingin di koneksikan
+```
 [bluetooth]# connect D0:53:58:F4:98:08
 ```
 >   Jika berhasil, akan muncul pesan Connection successful.
