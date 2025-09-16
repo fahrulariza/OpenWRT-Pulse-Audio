@@ -222,8 +222,11 @@ root@wow-wrt:/# sudo -u pulse pactl list short sinks
 1       bluez_sink.D0_85_73_E4_98_08.a2dp_sink  module-bluez5-device.c  s16le 2ch 44100Hz       SUSPENDED
 root@wow-wrt:/#
 ```
+>   Output yang berikan menunjukkan bahwa semua konfigurasi sudah benar.<br>
+>   pactl list short sinks: Menunjukkan speaker Bluetooth (bluez_sink...) terdeteksi sebagai sink. Statusnya `SUSPENDED` karena tidak ada audio yang diputar saat itu, ini normal.<br>
+>   pactl set-default-sink: Mengatur speaker Bluetooth sebagai output audio default.<br>
 
->   Jika sink Bluetooth muncul, uji pemutaran audio:
+Jika sink Bluetooth muncul, uji pemutaran audio:
 >   file audio harus berformat `wav`
 ```
 sudo -u pulse paplay /path/ke/file.wav
