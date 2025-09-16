@@ -91,6 +91,20 @@ hciconfig
 
 >   Pastikan adaptor Anda (misalnya hci0 atau hci1) memiliki BD Address yang valid (bukan 00:00...) dan status `UP RUNNING`.<br>
 ```
+root@riza-wrt:/# hciconfig
+
+hci0:   Type: Primary  Bus: UART
+
+        BD Address: 00:00:00:00:00:00  ACL MTU: 0:0  SCO MTU: 0:0
+
+        DOWN 
+
+        RX bytes:0 acl:0 sco:0 events:0 errors:0
+
+        TX bytes:42 acl:0 sco:0 commands:6 errors:0
+```
+
+```
 root@wow-wrt:/# hciconfig
 hci1:   Type: Primary  Bus: UART
         BD Address: 00:00:00:00:00:00  ACL MTU: 0:0  SCO MTU: 0:0
@@ -117,6 +131,9 @@ bluetoothctl# scan on
 ```
 >   Jika berhasil, akan muncul pesan Connection successful.
 4. Uji Pemutaran Audio:
+```
+sudo -u pulse pactl set-default-sink bluez_sink.D0_53:58:F4:98_08.a2dp_sink
+```
 ```
 sudo -u pulse pactl list short sinks
 ```
