@@ -16,7 +16,7 @@ Panduan ini menjelaskan langkah-langkah untuk menginstal dan mengkonfigurasi dri
 
 <p>
 Daftar Isi
-  <br>
+<br>
 >  1. ⚙️ Persiapan Awal<br>
 >  2. 🛠️ Konfigurasi PulseAudio<br>
 >  3. 🛠️ Tes Koneksi dan Pemutaran Audio
@@ -50,13 +50,11 @@ opkg update
 opkg install dos2unix
 ```
 <br>
-<br>
 
 2. Instal Layanan Bluetooth:
 ```
 opkg install kmod-bluetooth bluez-utils bluez-daemon
 ```
-<br>
 <br>
 
 3. Instal Layanan Audio (PulseAudio) secara berurutan:
@@ -85,7 +83,6 @@ opkg remove --force-removal-of-dependent-packages pulseaudio-daemon
 
 ## 2. 🛠️ Konfigurasi PulseAudio
 <br>
-<br>
 
 Modifikasi file konfigurasi PulseAudio untuk mengaktifkan modul Bluetooth.<br>
 
@@ -94,6 +91,8 @@ Modifikasi file konfigurasi PulseAudio untuk mengaktifkan modul Bluetooth.<br>
 ```
 vi /etc/pulse/system.pa
 ```
+<br>
+
 2. Tambahkan Modul Bluetooth:<br>
 >    Tambahkan baris berikut di akhir file atau di bagian yang sesuai:<br>
 ```
@@ -101,7 +100,6 @@ vi /etc/pulse/system.pa
 load-module module-bluetooth-discover
 load-module module-bluez5-discover
 ```
-<br>
 <br>
 
 3. Nonaktifkan Modul yang Tidak Perlu:<br>
@@ -117,8 +115,6 @@ load-module module-bluez5-discover
 ```
 > Simpan dan tutup file dengan menekan `Esc`, lalu ketik `:wq` dan tekan Enter.<br>
 > atau kamu bisa melakukan perubahan isi file `system.pa` melalui filemanager
-
-<br>
 <br>
 
 4. Buat direktori PulseAudio dan atur izin<br>
@@ -132,7 +128,6 @@ chown -R pulse:pulse /var/run/pulse
 
 ## 3. 🛠️ Tes Koneksi dan Pemutaran Audio
 Uji semua layanan secara manual sebelum membuat skrip otomatisasi.
-<br>
 <br>
 
 1. Mulai Ulang Layanan:
@@ -154,7 +149,6 @@ killall pulseaudio
 ```
 sudo -u pulse pulseaudio --daemonize --disallow-exit --disable-shm --exit-idle-time=-1
 ```
-<br>
 <br>
 
 2. Identifikasi Adaptor Bluetooth:
@@ -195,7 +189,6 @@ hci0:   Type: Primary  Bus: USB
         TX bytes:-1883463402 acl:3915131 sco:0 commands:331 errors:0
 ```
 <br>
-<br>
 
 3. Uji Koneksi Bluetooth:
 >  Di dalam `bluetoothctl`, pastikan speaker Anda dalam mode pairing, lalu jalankan perintah berikut:
@@ -220,8 +213,6 @@ bluetoothctl# trust D0:85:73:E4:98:08
 [bluetooth]# connect D0:53:58:F4:98:08
 ```
 >   Jika berhasil, Anda akan melihat pesan yang mengonfirmasi bahwa perangkat terhubung akan muncul pesan `Connection successful`.
-
-<br>
 <br>
 
 4. Identifikasi lagi Adaptor Bluetooth:
@@ -263,7 +254,6 @@ hci0:   Type: Primary  Bus: USB
         TX bytes:-1883463402 acl:3915131 sco:0 commands:331 errors:0
 ```
 <br>
-<br>
 
 5. Uji Pemutaran Audio:
 > untuk melihat daftar sink audio. Cek apakah audio dialihkan ke aliran bluetooth
@@ -297,10 +287,9 @@ sudo -u pulse paplay /path/ke/file.wav
 Selamat, audio berhasil diputar!
 <br>
 <br>
-<br>
-<br>
 
 6. Otomatis terkoneksi saat OpenWRT dihidupkan.
+<br>
 
 > Gunakan script ini jika ingin otomatis [here](https://github.com/fahrulariza/OpenWRT-Pulse-Audio/releases) <br>
 > simpan ditempat yang mudah diakses.<br>
