@@ -90,7 +90,7 @@ hciconfig
 bluetoothctl
 [bluetooth]# connect D0:53:58:F4:98:08
 ```
-    Jika berhasil, akan muncul pesan Connection successful.
+  Jika berhasil, akan muncul pesan Connection successful.
 
 
 
