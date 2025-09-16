@@ -26,6 +26,7 @@ Daftar Isi
 - **Alarm Cuara**
 - **Audio Adzan**
 - **Alarm Koneksi Internet**
+- **Smart IOT**
 - **dan lain-lainnya**
         
 </p>
