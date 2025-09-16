@@ -36,7 +36,7 @@ Bus 001 Device 002: ID 05e3:0610 GenesysLogic USB2.1 Hub
 Bus 001 Device 001: ID 1d6b:0002 Linux 5.15.162-ophub xhci-hcd xHCI Host Controller
 root@wow-wrt:/# 
 ```
-terlihat diatas ada terdeteksi `USB2.0-BT` dengan ID `33fa:0001` maka bisa dilanjutkan ketahap selanjutnya.<br>
+Ini menunjukkan bahwa dongle Bluetooth USB Anda sudah dikenali oleh sistem OpenWrt. Langkah selanjutnya adalah menginstal dan mengkonfigurasi paket perangkat lunak yang diperlukan untuk mengaktifkan fungsionalitas Bluetooth.terlihat diatas ada terdeteksi `USB2.0-BT` dengan ID `33fa:0001` maka bisa dilanjutkan ketahap selanjutnya.<br>
 
 Langkah pertama adalah memastikan semua paket yang diperlukan terinstal.
 1. Perbarui Daftar Paket:
