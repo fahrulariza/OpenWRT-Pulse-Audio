@@ -47,11 +47,26 @@ opkg update
 ```
 opkg install kmod-bluetooth bluez-utils bluez-daemon
 ```
-3. Instal Layanan Audio (PulseAudio):
+3. Instal Layanan Audio (PulseAudio) secara berurutan:
+```
+opkg install pulseaudio-daemon-avahi
+```
 ```
 opkg install pulseaudio pulseaudio-tools pulseaudio-module-bluetooth
 ```
 <br>
+>   bila Ada konflik file saat menginstal pulseaudio-daemon-avahi karena paket pulseaudio-daemon sudah terinstal dan keduanya mencoba menyediakan file yang sama. <br>
+>   Anda harus menghapus pulseaudio-daemon terlebih dahulu sebelum menginstal versi avahi.<br>
+>   Solusi
+>   Untuk mengatasi ini, gunakan opsi --force-depends untuk menghapus paket yang saling bergantung.<br>
+>   Hapus Paket Lama secara Paksa:
+>   Hapus paket pulseaudio-daemon dan dependensinya secara paksa.
+>   Ini akan menghapus pulseaudio-daemon, pulseaudio-tools, dan pulseaudio-profiles dalam satu perintah. <br>
+
+```
+opkg remove --force-removal-of-dependent-packages pulseaudio-daemon
+```
+>   lalu ulangi Instal Layanan Audio (PulseAudio) secara berurutan:
 
 ## 2. 🛠️ Konfigurasi PulseAudio
 Modifikasi file konfigurasi PulseAudio untuk mengaktifkan modul Bluetooth.<br>
