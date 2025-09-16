@@ -69,7 +69,7 @@ load-module module-bluez5-discover
 > Simpan dan tutup file dengan menekan `Esc`, lalu ketik `:wq` dan tekan Enter.<br>
 > atau kamu bisa melakukan perubahan isi file `system.pa` melalui filemanager
 <br>
-4. Buat direktori PulseAudio dan atur izin
+4. Buat direktori PulseAudio dan atur izin<br>
 ```
 mkdir -p /var/run/pulse/.config/pulse
 chown -R pulse:pulse /var/run/pulse
