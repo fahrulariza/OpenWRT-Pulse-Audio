@@ -302,6 +302,18 @@ Selamat, audio berhasil diputar!
 > Gunakan script ini jika ingin otomatis [here](https://github.com/fahrulariza/OpenWRT-Pulse-Audio/releases) <br>
 > simpan ditempat yang mudah diakses.<br>
 > edit pada script ubah MAC sesuai perangkat Speaker Bluetooth yang ingin di koneksikan.<br>
+```
+# Hubungkan ke speaker Bluetooth
+echo "Menghubungkan ke D0:53:58:F4:98:08..."
+bluetoothctl power on &
+bluetoothctl agent on &
+bluetoothctl trust D0:53:58:F4:98:08 &
+bluetoothctl connect D0:53:58:F4:98:08 &
+```
+lalu sediakan audio efek startup pada bagian ini. yang mana bila berhasil terkoneksi ke perangkat Speaker Bluetooth yang dituju maka akan diputar.
+```
+sudo -u pulse /usr/bin/paplay --volume=45536 /www/audio/startup.wav
+```
 lalu ubah perizinan dan konversi
 ```
 chmod +x /path/ke/audio-auto-connect.sh
