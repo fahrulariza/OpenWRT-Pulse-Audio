@@ -56,19 +56,7 @@ load-module module-bluetooth-discover
 load-module module-bluez5-discover
 ```
 3. Nonaktifkan Modul yang Tidak Perlu:<br>
->    Pastikan modul `module-detect` dan `module-console-kit` dinonaktifkan dengan menambahkan `#` di depannya untuk menghindari kesalahan. Bagian yang relevan akan terlihat seperti ini:
-root@riza-wrt:/# hciconfig<br>
-hci1:   Type: Primary  Bus: UART<br>
-        BD Address: 00:00:00:00:00:00  ACL MTU: 0:0  SCO MTU: 0:0<br>
-        DOWN <br>
-        RX bytes:0 acl:0 sco:0 events:0 errors:0<br>
-        TX bytes:14 acl:0 sco:0 commands:2 errors:0<br>
-<br>
-hci0:   Type: Primary  Bus: USB<br>
-        BD Address: 04:7F:0E:63:4F:A3  ACL MTU: 1021:9  SCO MTU: 255:4<br>
-        UP RUNNING <br>
-        RX bytes:27432458 acl:367 sco:0 events:3917831 errors:0<br>
-        TX bytes:-1883463402 acl:3915131 sco:0 commands:331 errors:0<br>
+>    Pastikan modul `module-detect` dan `module-console-kit` dinonaktifkan dengan menambahkan `#` di depannya untuk menghindari kesalahan. Bagian yang relevan akan terlihat seperti ini:<br>
 ```
 # .ifexists module-detect.so
 # load-module module-detect
@@ -96,6 +84,18 @@ sudo -u pulse pulseaudio --daemonize --disallow-exit --disable-shm --exit-idle-t
 hciconfig
 ```
 >   Pastikan adaptor Anda (misalnya hci0 atau hci1) memiliki BD Address yang valid (bukan 00:00...) dan status UP RUNNING.
+root@wow-wrt:/# hciconfig<br>
+hci1:   Type: Primary  Bus: UART<br>
+        BD Address: 00:00:00:00:00:00  ACL MTU: 0:0  SCO MTU: 0:0<br>
+        DOWN <br>
+        RX bytes:0 acl:0 sco:0 events:0 errors:0<br>
+        TX bytes:14 acl:0 sco:0 commands:2 errors:0<br>
+<br>
+hci0:   Type: Primary  Bus: USB<br>
+        BD Address: 04:7F:0E:63:4F:A3  ACL MTU: 1021:9  SCO MTU: 255:4<br>
+        UP RUNNING <br>
+        RX bytes:27432458 acl:367 sco:0 events:3917831 errors:0<br>
+        TX bytes:-1883463402 acl:3915131 sco:0 commands:331 errors:0<br>
 
 3. Uji Koneksi Bluetooth:
 ```
