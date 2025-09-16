@@ -102,6 +102,7 @@ bluetoothctl# scan on
 sudo -u pulse pactl list short sinks
 ```
 >   Jika sink Bluetooth muncul, uji pemutaran audio:
+>   file audio harus berformat `wav`
 ```
 sudo -u pulse paplay /path/ke/file.wav
 ```
