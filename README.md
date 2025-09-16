@@ -252,6 +252,15 @@ Jika sink Bluetooth muncul, uji pemutaran audio:
 ```
 sudo -u pulse paplay /path/ke/file.wav
 ```
-
+>   Jika terdengar suara melalui Speaker Bluetooth.
+Selamat, audio berhasil diputar!
+<br>
+<br>
+<br>
+<br>
+6. Otomatis terkoneksi saat OpenWRT dihidupkan
+> Gunakan script ini jika ingin otomatis [here](https://github.com/fahrulariza/openwrt-telegrambot/blob/master/README-EN.md)
+> simpan ditempat yang mudah diakses.
+> edit pada script ubah MAC sesuai perangkat Speaker Bluetooth yang ingin di koneksikan.
 
 
