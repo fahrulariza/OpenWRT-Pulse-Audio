@@ -42,7 +42,7 @@ opkg install pulseaudio pulseaudio-tools pulseaudio-module-bluetooth
 
 ## 2. 🛠️ Konfigurasi PulseAudio
 Modifikasi file konfigurasi PulseAudio untuk mengaktifkan modul Bluetooth.
-1. Buka file system.pa:
+1. Buka file `system.pa`:
 ```
 vi /etc/pulse/system.pa
 ```
@@ -53,7 +53,17 @@ vi /etc/pulse/system.pa
 load-module module-bluetooth-discover
 load-module module-bluez5-discover
 ```
+3. Nonaktifkan Modul yang Tidak Perlu:<br>
+   Pastikan modul `module-detect` dan `module-console-kit` dinonaktifkan dengan menambahkan `#` di depannya untuk menghindari kesalahan. Bagian yang relevan akan terlihat seperti ini:
+```
+# .ifexists module-detect.so
+# load-module module-detect
+# .endif
 
+# .ifexists module-console-kit.so
+# load-module module-console-kit
+# .endif
+```
 
 
 
