@@ -100,7 +100,7 @@ killall pulseaudio
 ```
 /etc/init.d/bluetoothd restart
 ```
->   Mulai PulseAudio:<br>
+>   Mulai ulang lagi PulseAudio:<br>
 >   Jalankan PulseAudio lagi, sekarang dengan konfigurasi yang diperbarui.<br>
 ```
 sudo -u pulse pulseaudio --daemonize --disallow-exit --disable-shm --exit-idle-time=-1
