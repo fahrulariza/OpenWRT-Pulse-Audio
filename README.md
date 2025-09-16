@@ -19,3 +19,8 @@ Daftar Isi
 2. Konfigurasi PulseAudio
 3. Tes Koneksi dan Pemutaran Audio
 4. Otomatisasi dengan Skrip Startup
+
+1. Persiapan Awal
+Langkah pertama adalah memastikan semua paket yang diperlukan terinstal.
+Perbarui Daftar Paket:
+`opkg update`
