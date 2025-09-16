@@ -19,8 +19,15 @@ Daftar Isi
 <br>
         >  1. ⚙️ Persiapan Awal<br>
         >  2. 🛠️ Konfigurasi PulseAudio<br>
-        >  3. 🛠️ Tes Koneksi dan Pemutaran Audio
-        >  4. Otomatisasi dengan Skrip Startup
+        >  3. 🛠️ Tes Koneksi dan Pemutaran Audio<br>
+        >  4. Otomatisasi dengan Skrip Startup<br>
+        
+## 🚀 Fitur Pengembangan kedepannya bisa digunakan untuk
+- **Alarm Cuara**
+- **Audio Adzan**
+- **Alarm Koneksi Internet**
+- **dan lain-lainnya**
+        
 </p>
 <br>
 
