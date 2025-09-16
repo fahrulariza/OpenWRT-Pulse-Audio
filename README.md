@@ -17,10 +17,10 @@ Panduan ini menjelaskan langkah-langkah untuk menginstal dan mengkonfigurasi dri
 <p>
 Daftar Isi
 <br>
->  1. ⚙️ Persiapan Awal<br>
->  2. 🛠️ Konfigurasi PulseAudio<br>
->  3. 🛠️ Tes Koneksi dan Pemutaran Audio
->  4. Otomatisasi dengan Skrip Startup
+        >  1. ⚙️ Persiapan Awal<br>
+        >  2. 🛠️ Konfigurasi PulseAudio<br>
+        >  3. 🛠️ Tes Koneksi dan Pemutaran Audio
+        >  4. Otomatisasi dengan Skrip Startup
 </p>
 <br>
 
