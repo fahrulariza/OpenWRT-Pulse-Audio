@@ -20,6 +20,7 @@ Daftar Isi
 3. Tes Koneksi dan Pemutaran Audio
 4. Otomatisasi dengan Skrip Startup
 
+<br>
 
 1. Persiapan Awal
 Langkah pertama adalah memastikan semua paket yang diperlukan terinstal.
