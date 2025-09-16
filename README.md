@@ -90,8 +90,9 @@ hciconfig
 ```
 
 >   Pastikan adaptor Anda (misalnya hci0 atau hci1) memiliki BD Address yang valid (bukan 00:00...) dan status `UP RUNNING`.<br>
->   contoh hciconfig belum `UP RUNNING` atau status `DOWN`
-> Lewatkan hciconfig jika belum ada koneksi ke perangkat melalui bluetooth. lanjut ke tahap selanjutnya
+>   contoh hciconfig belum `UP RUNNING` atau status `DOWN`<br>
+> LEWATKAN dulu hciconfig jika belum ada koneksi ke perangkat melalui bluetooth.
+> lanjut ke tahap selanjutnya 3. Uji Koneksi Bluetooth:
 ```
 root@riza-wrt:/# hciconfig
 
