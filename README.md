@@ -70,6 +70,7 @@ load-module module-bluez5-discover
 > atau kamu bisa melakukan perubahan isi file `system.pa` melalui filemanager
 <br>
 4. Buat direktori PulseAudio dan atur izin<br>
+
 ```
 mkdir -p /var/run/pulse/.config/pulse
 chown -R pulse:pulse /var/run/pulse
