@@ -19,7 +19,7 @@ Daftar Isi
   <br>
 >  1. ⚙️ Persiapan Awal<br>
 >  2. 🛠️ Konfigurasi PulseAudio<br>
->  3. Tes Koneksi dan Pemutaran Audio
+>  3. 🛠️ Tes Koneksi dan Pemutaran Audio
 >  4. Otomatisasi dengan Skrip Startup
 </p>
 <br>
@@ -41,6 +41,7 @@ opkg install pulseaudio pulseaudio-tools pulseaudio-module-bluetooth
 <br>
 ## 2. 🛠️ Konfigurasi PulseAudio
 Modifikasi file konfigurasi PulseAudio untuk mengaktifkan modul Bluetooth.<br>
+
 > 1. Buka file `system.pa`:
 
 ```
@@ -63,9 +64,11 @@ load-module module-bluez5-discover
 # load-module module-console-kit
 # .endif
 ```
-> Simpan dan tutup file dengan menekan Esc, lalu ketik :wq dan tekan Enter.
+> Simpan dan tutup file dengan menekan `Esc`, lalu ketik `:wq` dan tekan Enter.
+> atau kamu bisa melakukan perubahan isi file `system.pa` melalui filemanager
 <br>
-## 2. 🛠️ Konfigurasi PulseAudio
+
+## 3. 🛠️ Tes Koneksi dan Pemutaran Audio
 
 
 
