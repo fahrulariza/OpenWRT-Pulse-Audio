@@ -26,15 +26,15 @@ Daftar Isi
 
 ## 1. ⚙️ Persiapan Awal
 Langkah pertama adalah memastikan semua paket yang diperlukan terinstal.
-> 1. Perbarui Daftar Paket:
+1. Perbarui Daftar Paket:
 ```
 opkg update
 ```
-> 2. Instal Layanan Bluetooth:
+2. Instal Layanan Bluetooth:
 ```
 opkg install kmod-bluetooth bluez-utils bluez-daemon
 ```
-> 3. Instal Layanan Audio (PulseAudio):
+3. Instal Layanan Audio (PulseAudio):
 ```
 opkg install pulseaudio pulseaudio-tools pulseaudio-module-bluetooth
 ```
