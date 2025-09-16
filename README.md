@@ -135,6 +135,7 @@ hci0:   Type: Primary  Bus: USB
         TX bytes:-1883463402 acl:3915131 sco:0 commands:331 errors:0
 ```
 3. Uji Koneksi Bluetooth:
+>  Di dalam `bluetoothctl`, pastikan speaker Anda dalam mode pairing, lalu jalankan perintah berikut:
 ```
 bluetoothctl
 ```
@@ -155,7 +156,7 @@ bluetoothctl# trust D0:85:73:E4:98:08
 ```
 [bluetooth]# connect D0:53:58:F4:98:08
 ```
->   Jika berhasil, akan muncul pesan Connection successful.
+>   Jika berhasil, Anda akan melihat pesan yang mengonfirmasi bahwa perangkat terhubung akan muncul pesan `Connection successful`.
 4. Identifikasi lagi Adaptor Bluetooth:
 ```
 hciconfig
@@ -177,7 +178,9 @@ hci0:   Type: Primary  Bus: USB
         RX bytes:27432458 acl:367 sco:0 events:3917831 errors:0
         TX bytes:-1883463402 acl:3915131 sco:0 commands:331 errors:0
 ```
->   contoh hciconfig status  `DOWN` terkoneksi ke alamat bluetooth `D0:53:58:F4:98:08`
+>   jalankan perintah `hciconfig hci0 up` jika posisinya di hci0 atau hci1 maka gunakan hci sesuai interface MAC bluetooth.<br>
+>   lalu cek kembali `hciconfig` apakah berhasil. <br>
+>   contoh hciconfig status  `UP RUNNING` terkoneksi ke alamat bluetooth `D0:53:58:F4:98:08` <br>
 ```
 root@wow-wrt:/# hciconfig
 hci1:   Type: Primary  Bus: UART
