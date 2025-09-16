@@ -61,6 +61,7 @@ load-module module-bluez5-discover
 # .ifexists module-detect.so
 # load-module module-detect
 # .endif
+
 # .ifexists module-console-kit.so
 # load-module module-console-kit
 # .endif
@@ -70,6 +71,15 @@ load-module module-bluez5-discover
 <br>
 
 ## 3. 🛠️ Tes Koneksi dan Pemutaran Audio
+Uji semua layanan secara manual sebelum membuat skrip otomatisasi.
+
+> 1. Mulai Ulang Layanan:
+```
+/etc/init.d/bluetoothd restart
+killall pulseaudio
+sudo -u pulse pulseaudio --daemonize --disallow-exit --disable-shm --exit-idle-time=-1
+```
+
 
 
 
