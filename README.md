@@ -83,14 +83,14 @@ sudo -u pulse pulseaudio --daemonize --disallow-exit --disable-shm --exit-idle-t
 ```
 hciconfig
 ```
-> Pastikan adaptor Anda (misalnya hci0 atau hci1) memiliki BD Address yang valid (bukan 00:00...) dan status UP RUNNING.
+>   Pastikan adaptor Anda (misalnya hci0 atau hci1) memiliki BD Address yang valid (bukan 00:00...) dan status UP RUNNING.
 
 > 3. Uji Koneksi Bluetooth:
 ```
 bluetoothctl
 [bluetooth]# connect D0:53:58:F4:98:08
 ```
-  Jika berhasil, akan muncul pesan Connection successful.
+>   Jika berhasil, akan muncul pesan Connection successful.
 
 
 
