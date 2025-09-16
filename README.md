@@ -115,6 +115,7 @@ load-module module-bluez5-discover
 ```
 > Simpan dan tutup file dengan menekan `Esc`, lalu ketik `:wq` dan tekan Enter.<br>
 > atau kamu bisa melakukan perubahan isi file `system.pa` melalui filemanager
+> ini `system.pa` yang sudah di modifikasi [here](https://github.com/fahrulariza/OpenWRT-Pulse-Audio/blob/master/etc/pulse/system.pa)
 <br>
 
 4. Buat direktori PulseAudio dan atur izin<br>
