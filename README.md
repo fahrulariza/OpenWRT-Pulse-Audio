@@ -114,7 +114,7 @@ load-module module-bluez5-discover
 # .endif
 ```
 > Simpan dan tutup file dengan menekan `Esc`, lalu ketik `:wq` dan tekan Enter.<br>
-> atau kamu bisa melakukan perubahan isi file `system.pa` melalui filemanager
+> atau kamu bisa melakukan perubahan isi file `system.pa` melalui `filemanager` yang tersedia.<br>
 > ini `system.pa` yang sudah di modifikasi [here](https://github.com/fahrulariza/OpenWRT-Pulse-Audio/blob/master/etc/pulse/system.pa)
 <br>
 
