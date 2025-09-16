@@ -39,7 +39,6 @@ opkg install kmod-bluetooth bluez-utils bluez-daemon
 opkg install pulseaudio pulseaudio-tools pulseaudio-module-bluetooth
 ```
 <br>
-
 ## 2. 🛠️ Konfigurasi PulseAudio
 Modifikasi file konfigurasi PulseAudio untuk mengaktifkan modul Bluetooth.
 > 1. Buka file `system.pa`:
@@ -64,6 +63,9 @@ load-module module-bluez5-discover
   # load-module module-console-kit
   # .endif
   ```
+> Simpan dan tutup file dengan menekan Esc, lalu ketik :wq dan tekan Enter.
+<br>
+## 2. 🛠️ Konfigurasi PulseAudio
 
 
 
