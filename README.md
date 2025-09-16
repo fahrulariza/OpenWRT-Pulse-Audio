@@ -46,6 +46,9 @@ Langkah pertama adalah memastikan semua paket yang diperlukan terinstal.
 ```
 opkg update
 ```
+```
+opkg install dos2unix
+```
 <br>
 <br>
 
@@ -310,15 +313,25 @@ bluetoothctl agent on &
 bluetoothctl trust D0:53:58:F4:98:08 &
 bluetoothctl connect D0:53:58:F4:98:08 &
 ```
-lalu sediakan audio efek startup pada bagian ini. yang mana bila berhasil terkoneksi ke perangkat Speaker Bluetooth yang dituju maka akan diputar.
+> lalu sediakan audio efek startup pada bagian ini. yang mana bila berhasil terkoneksi ke perangkat Speaker Bluetooth yang dituju maka akan diputar.
 ```
 sudo -u pulse /usr/bin/paplay --volume=45536 /www/audio/startup.wav
 ```
-lalu ubah perizinan dan konversi
+> lalu ubah perizinan dan konversi
 ```
 chmod +x /path/ke/audio-auto-connect.sh
 ```
 ```
 dos2unix /path/ke/audio-auto-connect.sh
 ```
+> disable startup init.d pada pulseaudio
+```
+/etc/init.d/pulseaudio disable
+```
+> lalu tambahkan di `/etc/rc.local` untuk script `audio-auto-connect.sh` berjalan otomatis
+```
+# Mulai layanan absensi-kerja di background
+/path/ke/audio-auto-connect.sh &
+```
+> lalu restart OpenWRT dan Tunggu apakah berhasil terdengar Suara terkoneksi di Bluetooth Speaker.
 
