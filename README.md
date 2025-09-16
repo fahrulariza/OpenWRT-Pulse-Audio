@@ -73,19 +73,19 @@ load-module module-bluez5-discover
 ## 3. 🛠️ Tes Koneksi dan Pemutaran Audio
 Uji semua layanan secara manual sebelum membuat skrip otomatisasi.
 
-> 1. Mulai Ulang Layanan:
+1. Mulai Ulang Layanan:
 ```
 /etc/init.d/bluetoothd restart
 killall pulseaudio
 sudo -u pulse pulseaudio --daemonize --disallow-exit --disable-shm --exit-idle-time=-1
 ```
-> 2. Identifikasi Adaptor Bluetooth:
+2. Identifikasi Adaptor Bluetooth:
 ```
 hciconfig
 ```
 >   Pastikan adaptor Anda (misalnya hci0 atau hci1) memiliki BD Address yang valid (bukan 00:00...) dan status UP RUNNING.
 
-> 3. Uji Koneksi Bluetooth:
+3. Uji Koneksi Bluetooth:
 ```
 bluetoothctl
 ```
@@ -97,7 +97,7 @@ bluetoothctl# scan on
 [bluetooth]# connect D0:53:58:F4:98:08
 ```
 >   Jika berhasil, akan muncul pesan Connection successful.
-> 4. Uji Pemutaran Audio:
+4. Uji Pemutaran Audio:
 ```
 sudo -u pulse pactl list short sinks
 ```
