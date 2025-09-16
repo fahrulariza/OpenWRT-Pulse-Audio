@@ -27,4 +27,5 @@ Daftar Isi
 ## 1. Persiapan Awal
 Langkah pertama adalah memastikan semua paket yang diperlukan terinstal.
 Perbarui Daftar Paket:
-```opkg update```
+```opkg update
+```
