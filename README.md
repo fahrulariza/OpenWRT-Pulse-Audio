@@ -17,14 +17,14 @@ Panduan ini menjelaskan langkah-langkah untuk menginstal dan mengkonfigurasi dri
 <p>
 Daftar Isi
   <br>
-  1. Persiapan Awal<br>
-  2. Konfigurasi PulseAudio<br>
+  1. ⚙️ Persiapan Awal<br>
+  2. 🛠️ Konfigurasi PulseAudio<br>
 3. Tes Koneksi dan Pemutaran Audio
 4. Otomatisasi dengan Skrip Startup
 </p>
 <br>
 
-## 1. Persiapan Awal
+## 1. ⚙️ Persiapan Awal
 Langkah pertama adalah memastikan semua paket yang diperlukan terinstal.
 1. Perbarui Daftar Paket:
 ```
@@ -34,4 +34,11 @@ opkg update
 ```
 opkg install kmod-bluetooth bluez-utils bluez-daemon
 ```
+3. Instal Layanan Audio (PulseAudio):
+```
+opkg install pulseaudio pulseaudio-tools pulseaudio-module-bluetooth
+```
+
+## 2. 🛠️ Konfigurasi PulseAudio
+
 
