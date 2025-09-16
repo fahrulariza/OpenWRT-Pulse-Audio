@@ -92,9 +92,17 @@ chown -R pulse:pulse /var/run/pulse
 Uji semua layanan secara manual sebelum membuat skrip otomatisasi.
 
 1. Mulai Ulang Layanan:
+>   Hentikan PulseAudio:<br>
+```
+killall pulseaudio
+```
+>   Mulai ulang layanan Bluetooth:<br>
 ```
 /etc/init.d/bluetoothd restart
-killall pulseaudio
+```
+>   Mulai PulseAudio:<br>
+>   Jalankan PulseAudio lagi, sekarang dengan konfigurasi yang diperbarui.<br>
+```
 sudo -u pulse pulseaudio --daemonize --disallow-exit --disable-shm --exit-idle-time=-1
 ```
 2. Identifikasi Adaptor Bluetooth:
