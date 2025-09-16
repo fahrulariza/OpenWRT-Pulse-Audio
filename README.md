@@ -90,6 +90,7 @@ hciconfig
 ```
 
 >   Pastikan adaptor Anda (misalnya hci0 atau hci1) memiliki BD Address yang valid (bukan 00:00...) dan status `UP RUNNING`.<br>
+>   contoh hciconfig belum `UP RUNNING` atau status `DOWN`
 ```
 root@riza-wrt:/# hciconfig
 
@@ -103,7 +104,7 @@ hci0:   Type: Primary  Bus: UART
 
         TX bytes:42 acl:0 sco:0 commands:6 errors:0
 ```
-
+>   contoh hciconfig status  `UP RUNNING` terkoneksi ke alamat bluetooth `D0:53:58:F4:98:08`
 ```
 root@wow-wrt:/# hciconfig
 hci1:   Type: Primary  Bus: UART
