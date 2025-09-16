@@ -17,6 +17,7 @@ Panduan ini menjelaskan langkah-langkah untuk menginstal dan mengkonfigurasi dri
 <p>
         
 ## Daftar Isi
+
 <br>
         >  1. ⚙️ Persiapan Awal<br>
         >  2. 🛠️ Konfigurasi PulseAudio<br>
