@@ -46,7 +46,7 @@ Modifikasi file konfigurasi PulseAudio untuk mengaktifkan modul Bluetooth.
 ```
 vi /etc/pulse/system.pa
 ```
-2. Tambahkan Modul Bluetooth:
+2. Tambahkan Modul Bluetooth:<br>
    Tambahkan baris berikut di akhir file atau di bagian yang sesuai:
 ```
 ### Bluetooth modules
