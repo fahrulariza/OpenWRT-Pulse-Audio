@@ -142,12 +142,48 @@ bluetoothctl# trust D0:85:73:E4:98:08
 [bluetooth]# connect D0:53:58:F4:98:08
 ```
 >   Jika berhasil, akan muncul pesan Connection successful.
-4. Uji Pemutaran Audio:
-> Cek apakah audio dialihkan ke aliran bluetooth
+4. Identifikasi lagi Adaptor Bluetooth:
+```
+hciconfig
+```
+
+>   Pastikan adaptor Anda (misalnya hci0 atau hci1) memiliki BD Address yang valid (bukan 00:00...) dan status `UP RUNNING`.<br>
+>   bluetooth berhasil terkoneksi ke alamat bluetooth `D0:53:58:F4:98:08` ke `hci0` tapi hciconfig status  `DOWN` 
+```
+root@wow-wrt:/# hciconfig
+hci1:   Type: Primary  Bus: UART
+        BD Address: 00:00:00:00:00:00  ACL MTU: 0:0  SCO MTU: 0:0
+        DOWN 
+        RX bytes:0 acl:0 sco:0 events:0 errors:0
+        TX bytes:14 acl:0 sco:0 commands:2 errors:0
+
+hci0:   Type: Primary  Bus: USB
+        BD Address: D0:53:58:F4:98:08  ACL MTU: 1021:9  SCO MTU: 255:4
+        DOWN 
+        RX bytes:27432458 acl:367 sco:0 events:3917831 errors:0
+        TX bytes:-1883463402 acl:3915131 sco:0 commands:331 errors:0
+```
+>   contoh hciconfig status  `DOWN` terkoneksi ke alamat bluetooth `D0:53:58:F4:98:08`
+```
+root@wow-wrt:/# hciconfig
+hci1:   Type: Primary  Bus: UART
+        BD Address: 00:00:00:00:00:00  ACL MTU: 0:0  SCO MTU: 0:0
+        DOWN 
+        RX bytes:0 acl:0 sco:0 events:0 errors:0
+        TX bytes:14 acl:0 sco:0 commands:2 errors:0
+
+hci0:   Type: Primary  Bus: USB
+        BD Address: D0:53:58:F4:98:08  ACL MTU: 1021:9  SCO MTU: 255:4
+        UP RUNNING 
+        RX bytes:27432458 acl:367 sco:0 events:3917831 errors:0
+        TX bytes:-1883463402 acl:3915131 sco:0 commands:331 errors:0
+```
+5. Uji Pemutaran Audio:
+> untuk melihat daftar sink audio. Cek apakah audio dialihkan ke aliran bluetooth
 ```
 sudo -u pulse pactl list short sinks
 ```
-> jika belum maka set pengaturan ke alamat bluetooth
+> jika belum maka set pengaturan ke alamat bluetooth. Jika ingin memastikan speaker Bluetooth adalah output default, gunakan perintah ini:
 ```
 sudo -u pulse pactl set-default-sink bluez_sink.D0_53:58:F4:98_08.a2dp_sink
 ```
