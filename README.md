@@ -25,6 +25,19 @@ Daftar Isi
 <br>
 
 ## 1. ⚙️ Persiapan Awal
+cek dulu di terminal melalui `lsusb` apakah module dongle bluetooth yang akan digunakan terdeteksi dan support.<br>
+```
+root@wow-wrt:/# lsusb
+Bus 001 Device 003: ID 2717:ff88 Google Pixel
+Bus 002 Device 001: ID 1d6b:0003 Linux 5.15.162-ophub xhci-hcd xHCI Host Controller
+Bus 001 Device 004: ID 0bda:8153 Realtek USB 10/100/1000 LAN
+Bus 001 Device 005: ID 33fa:0001  USB2.0-BT
+Bus 001 Device 002: ID 05e3:0610 GenesysLogic USB2.1 Hub
+Bus 001 Device 001: ID 1d6b:0002 Linux 5.15.162-ophub xhci-hcd xHCI Host Controller
+root@wow-wrt:/# 
+```
+terlihat diatas ada terdeteksi `USB2.0-BT` dengan ID `33fa:0001` maka bisa dilanjutkan ketahap selanjutnya.<br>
+
 Langkah pertama adalah memastikan semua paket yang diperlukan terinstal.
 1. Perbarui Daftar Paket:
 ```
