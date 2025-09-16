@@ -186,6 +186,10 @@ bluetoothctl# trust D0:85:73:E4:98:08
 [bluetooth]# connect D0:53:58:F4:98:08
 ```
 >   Jika berhasil, Anda akan melihat pesan yang mengonfirmasi bahwa perangkat terhubung akan muncul pesan `Connection successful`.
+
+<br>
+<br>
+
 4. Identifikasi lagi Adaptor Bluetooth:
 ```
 hciconfig
@@ -224,6 +228,9 @@ hci0:   Type: Primary  Bus: USB
         RX bytes:27432458 acl:367 sco:0 events:3917831 errors:0
         TX bytes:-1883463402 acl:3915131 sco:0 commands:331 errors:0
 ```
+<br>
+<br>
+
 5. Uji Pemutaran Audio:
 > untuk melihat daftar sink audio. Cek apakah audio dialihkan ke aliran bluetooth
 ```
@@ -258,9 +265,11 @@ Selamat, audio berhasil diputar!
 <br>
 <br>
 <br>
-6. Otomatis terkoneksi saat OpenWRT dihidupkan
-> Gunakan script ini jika ingin otomatis [here](https://github.com/fahrulariza/openwrt-telegrambot/blob/master/README-EN.md)
-> simpan ditempat yang mudah diakses.
-> edit pada script ubah MAC sesuai perangkat Speaker Bluetooth yang ingin di koneksikan.
+
+6. Otomatis terkoneksi saat OpenWRT dihidupkan.
+
+> Gunakan script ini jika ingin otomatis [here](https://github.com/fahrulariza/openwrt-telegrambot/blob/master/README-EN.md)<br>
+> simpan ditempat yang mudah diakses.<br>
+> edit pada script ubah MAC sesuai perangkat Speaker Bluetooth yang ingin di koneksikan.<br>
 
 
