@@ -14,12 +14,13 @@
 Instalasi dan Konfigurasi Bluetooth Audio di OpenWrt
 Panduan ini menjelaskan langkah-langkah untuk menginstal dan mengkonfigurasi driver dan layanan audio di OpenWrt, serta skrip untuk otomatisasi koneksi ke speaker Bluetooth saat startup.
 
+<p>
 Daftar Isi
 1. Persiapan Awal
 2. Konfigurasi PulseAudio
 3. Tes Koneksi dan Pemutaran Audio
 4. Otomatisasi dengan Skrip Startup
-
+</p>
 <br>
 
 1. Persiapan Awal
