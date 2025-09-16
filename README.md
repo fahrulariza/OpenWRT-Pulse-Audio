@@ -79,8 +79,17 @@ Uji semua layanan secara manual sebelum membuat skrip otomatisasi.
 killall pulseaudio
 sudo -u pulse pulseaudio --daemonize --disallow-exit --disable-shm --exit-idle-time=-1
 ```
+> 2. Identifikasi Adaptor Bluetooth:
+```
+hciconfig
+```
+> Pastikan adaptor Anda (misalnya hci0 atau hci1) memiliki BD Address yang valid (bukan 00:00...) dan status UP RUNNING.
 
-
+> 3. Uji Koneksi Bluetooth:
+```
+bluetoothctl
+[bluetooth]# connect D0:53:58:F4:98:08
+```
 
 
 
