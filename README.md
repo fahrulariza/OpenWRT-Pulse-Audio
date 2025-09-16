@@ -55,15 +55,15 @@ load-module module-bluez5-discover
 ```
 3. Nonaktifkan Modul yang Tidak Perlu:<br>
    Pastikan modul `module-detect` dan `module-console-kit` dinonaktifkan dengan menambahkan `#` di depannya untuk menghindari kesalahan. Bagian yang relevan akan terlihat seperti ini:
-```
-# .ifexists module-detect.so
-# load-module module-detect
-# .endif
-
-# .ifexists module-console-kit.so
-# load-module module-console-kit
-# .endif
-```
+  ```
+  # .ifexists module-detect.so
+  # load-module module-detect
+  # .endif
+  
+  # .ifexists module-console-kit.so
+  # load-module module-console-kit
+  # .endif
+  ```
 
 
 
