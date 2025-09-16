@@ -112,6 +112,11 @@ Uji semua layanan secara manual sebelum membuat skrip otomatisasi.
 ```
 killall pulseaudio
 ```
+>   Periksa Konfigurasi D-Bus:<br>
+>   Pastikan layanan dbus berjalan dengan benar, karena bluetoothd dan pulseaudio sangat bergantung padanya.<br>
+```
+/etc/init.d/dbus start
+```
 >   Mulai ulang layanan Bluetooth:<br>
 ```
 /etc/init.d/bluetoothd restart
