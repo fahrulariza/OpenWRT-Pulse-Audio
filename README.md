@@ -9,12 +9,12 @@
 ![Top Language](https://img.shields.io/github/languages/top/fahrulariza/OpenWRT-Pulse-Audio)
 [![Open Issues](https://img.shields.io/github/issues/fahrulariza/OpenWRT-Pulse-Audio)](https://github.com/fahrulariza/OpenWRT-Pulse-Audio/issues)
 
-<h1>Bluetooth Audio di OS OpenWrt / Armbian</h1>
-<p>Kelola router berbasis OS OpenWrt dan Armbian Anda dengan mudah dan kreatif!</p>
+<h1>Bluetooth Audio di OS OpenWrt / Armbian Linux</h1>
+<p>Kelola router berbasis OS OpenWrt dan Armbian Linux dengan mudah dan kreatif!</p>
 </div>
 
-Instalasi dan Konfigurasi Bluetooth Audio di OpenWrt
-Panduan ini menjelaskan langkah-langkah untuk menginstal dan mengkonfigurasi driver dan layanan audio di OpenWrt, serta skrip untuk otomatisasi koneksi ke speaker Bluetooth saat startup.
+Instalasi dan Konfigurasi Bluetooth Audio dengan pulseaudio
+Panduan ini menjelaskan langkah-langkah untuk menginstal dan mengkonfigurasi driver dan layanan audio di OS OpenWrt / Armbian Linux, serta skrip untuk otomatisasi koneksi ke speaker Bluetooth saat startup.
 
 <p>
 
