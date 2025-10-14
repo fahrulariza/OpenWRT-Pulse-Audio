@@ -7,8 +7,8 @@
 ![Top Language](https://img.shields.io/github/languages/top/fahrulariza/OpenWRT-Pulse-Audio)
 [![Open Issues](https://img.shields.io/github/issues/fahrulariza/OpenWRT-Pulse-Audio)](https://github.com/fahrulariza/OpenWRT-Pulse-Audio/issues)
 
-<h1>Bluetooth Audio di OpenWrt</h1>
-<p>Kelola router OpenWrt Anda dengan mudah dan kreatif!</p>
+<h1>Bluetooth Audio di OpenWrt / Armbian</h1>
+<p>Kelola router OpenWrt dan Armbian Anda dengan mudah dan kreatif!</p>
 </div>
 
 Instalasi dan Konfigurasi Bluetooth Audio di OpenWrt
