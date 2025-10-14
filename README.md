@@ -18,8 +18,7 @@ Panduan ini menjelaskan langkah-langkah untuk menginstal dan mengkonfigurasi dri
 
 <p>
 
-        <br>
-`English instructions` [here](https://github.com/fahrulariza/OpenWRT-Pulse-Audio/blob/master/README-EN.md)
+English instructions [here](https://github.com/fahrulariza/OpenWRT-Pulse-Audio/blob/master/README-EN.md)
 
 ## Daftar Isi
 
