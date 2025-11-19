@@ -31,7 +31,7 @@ English instructions [here](https://github.com/fahrulariza/OpenWRT-Pulse-Audio/b
 
 ## 🚀 Fitur Pengembangan kedepannya bisa digunakan untuk
 - [**Notifikasi Cuaca**](https://github.com/fahrulariza/Pulse-Audio-notifications/tree/master/weather-notifications)
-- **Audio Adzan**
+- [**Audio Adzan**](https://github.com/fahrulariza/Pulse-Audio-notifications/tree/master/adzan-notifications)
 - **Alarm Koneksi Internet**
 - **Smart IOT**
 - **dan lain-lainnya**
