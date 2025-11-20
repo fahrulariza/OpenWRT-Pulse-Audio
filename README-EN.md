@@ -28,8 +28,8 @@ This guide explains the steps for installing and configuring audio drivers and s
 <br>
 
 ## 🚀 Future development features can be used for
-- **Sound Alarm**
-- **Azan Audio**
+- [**Weather Notifications**](https://github.com/fahrulariza/Pulse-Audio-notifications/tree/master/weather-notifications)
+- [**Audio Adzan**](https://github.com/fahrulariza/Pulse-Audio-notifications/tree/master/adzan-notifications)
 - **Internet Connection Alarm**
 - **Smart IoT**
 - **and others**
